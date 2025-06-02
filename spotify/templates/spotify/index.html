@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music-FY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .navbar {
+            background-color: #121212;
+        }
+        .navbar-brand {
+            color: #1DB954;
+            font-weight: bold;
+        }
+        .search-bar input {
+            width: 300px;
+            border-radius: 50px;
+        }
+        .container-artistas{
+            margin-top: 100px;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        .container-artistas p{
+            color: #ffffff;
+            font-size: 15;
+            font-weight: bold;
+        }
+
+        .container-linha-artistas-1{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .artista {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .artista:hover {
+            transform: scale(1.1);
+        }
+        .artist-img {
+            margin-top: 30px;
+            width: 100px;  /* Ajuste conforme necessário */
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .container-artistas-2 a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .section-title {
+            color: #1DB954;
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 100px;
+            background-color: #121212;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container-tops {
+            margin-top: 100px;
+        }
+
+        .card-body {
+            cursor: pointer;
+        }
+        .card-body:hover {
+            background-color: #1DB954;
+            color: #000;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Music-FY</a>
+            <form class="d-flex search-bar">
+                <input class="form-control me-2" type="search" placeholder="O que você deseja ouvir?" aria-label="Search">
+            </form>
+            <div class="ms-auto">
+                <a href="#" class="text-light me-3">Suporte</a>
+                <a href="#" class="text-light me-3">Contatos</a>
+                <a href="#" class="text-light me-3">Sobre</a>
+                <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Entrar</a>
+                <a href="{% url 'cadastro' %}" class="btn btn-success">Inscreva-se</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container-artistas">
+        <div class="container mt-4">
+            <h2 class="section-title">Artistas Populares</h2>
+            <div class="row row-cols-5 g-3">
+                <div class="container-linha-artistas-1">
+                    <a href="{% url 'detalhesDoArtista' %}">
+                        <div class="artista text-center">
+                            <img src="https://theradioativo.com.br/wp-content/uploads/2024/06/matue.jpg" alt="Matue" class="artist-img">
+                            <p>Matue</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://blog.documentodoestudante.com.br/blog/wp-content/uploads/2025/01/henrique-juliano-1639424106471_v2_1x1.jpg" alt="Henrique e Juliano" class="artist-img">
+                            <p>Henrique e Juliano</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSl5lE8jeuMpAGLCXPTWr31WjeUqmkBJbFMw&s" alt="João Gomes" class="artist-img">
+                            <p>João Gomes</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://yt3.googleusercontent.com/TbO1ShBZ003RBx_SRqsgE_zsgu_QlCULN1d-QONb6QfOBygCQWWOXKyvH8itQ6jEu_GjDIwvdq0=s900-c-k-c0x00ffffff-no-rj" alt="Leonardo" class="artist-img">
+                            <p>Leonardo</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://akamai.sscdn.co/uploadfile/letras/fotos/3/3/b/8/33b81204cc83c6d349e5c36bfb841d30.jpg" alt="Iguinho e Lulinha" class="artist-img">
+                            <p>Iguinho e Lulinha</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://adoreshows.com.br/wp-content/uploads/2024/07/zevaqueiro.webp" alt="Ze Vaqueiro" class="artist-img">
+                            <p>Ze vaqueiro</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://noticiapreta.com.br/wp-content/uploads/2025/01/Oruam-e1737635391544.webp" alt="Oruam" class="artist-img">
+                            <p>Oruam</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://imagem.natelinha.uol.com.br/tudo-sobre/ze-felipe_4653.jpeg" alt="Ze Felipe" class="artist-img">
+                            <p>Ze Felipe</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-artistas-2">
+        <div class="container mt-4">
+            <div class="row row-cols-5 g-3">
+                <div class="container-linha-artistas-1">
+                    <a href="{% url 'detalhesDoArtista' %}">
+                        <div class="artista text-center">
+                            <img src="https://theradioativo.com.br/wp-content/uploads/2024/06/matue.jpg" alt="Matue" class="artist-img">
+                            <p>Matue</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://blog.documentodoestudante.com.br/blog/wp-content/uploads/2025/01/henrique-juliano-1639424106471_v2_1x1.jpg" alt="Henrique e Juliano" class="artist-img">
+                            <p>Henrique e Juliano</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSl5lE8jeuMpAGLCXPTWr31WjeUqmkBJbFMw&s" alt="João Gomes" class="artist-img">
+                            <p>João Gomes</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://yt3.googleusercontent.com/TbO1ShBZ003RBx_SRqsgE_zsgu_QlCULN1d-QONb6QfOBygCQWWOXKyvH8itQ6jEu_GjDIwvdq0=s900-c-k-c0x00ffffff-no-rj" alt="Leonardo" class="artist-img">
+                            <p>Leonardo</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://akamai.sscdn.co/uploadfile/letras/fotos/3/3/b/8/33b81204cc83c6d349e5c36bfb841d30.jpg" alt="Iguinho e Lulinha" class="artist-img">
+                            <p>Iguinho e Lulinha</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://adoreshows.com.br/wp-content/uploads/2024/07/zevaqueiro.webp" alt="Ze Vaqueiro" class="artist-img">
+                            <p>Ze vaqueiro</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://noticiapreta.com.br/wp-content/uploads/2025/01/Oruam-e1737635391544.webp" alt="Oruam" class="artist-img">
+                            <p>Oruam</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="artista text-center">
+                            <img src="https://imagem.natelinha.uol.com.br/tudo-sobre/ze-felipe_4653.jpeg" alt="Ze Felipe" class="artist-img">
+                            <p>Ze Felipe</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-tops">
+        <div class="container mt-4">
+            <h2 class="section-title">Playlists em Destaque</h2>
+            <div class="row row-cols-3 g-3">
+                <div class="col">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">Músicas Mais Tocadas</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">Top 50 Carnaval</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">Top 50 Sertanejo</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">Top 50 Funk</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">Hits Brasil</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">Trap Association</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 Music-FY. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
