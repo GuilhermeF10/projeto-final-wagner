@@ -28,28 +28,28 @@ urlpatterns = [
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', lambda request: redirect('login')),  # Redireciona para /login/
-    path('', include('spotify.urls')),            # Inclua suas rotas de app
+    path('', lambda request: redirect('login')),  
+    path('', include('spotify.urls')),            
 ]
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('spotify.urls')),  # garante que '' e 'login/' funcionem
+    path('', include('spotify.urls')),  
 ]
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', lambda request: redirect('login')),  # redireciona "/" para /login/
-    path('', include('spotify.urls')),            # inclua o app "spotify"
+    path('', lambda request: redirect('login')), 
+    path('', include('spotify.urls')),           
 ]
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('spotify.urls')),  # Isso inclui as URLs do app
+    path('', include('spotify.urls')),  
 ]
 
